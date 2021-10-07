@@ -27,5 +27,7 @@ ng s -o
 ```
 
 Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
+
+
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm
