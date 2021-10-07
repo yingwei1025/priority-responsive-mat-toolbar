@@ -25,6 +25,9 @@ Run the application:
 ```
 ng s -o
 ```
+Demo:
+
+![](demo.gif)
 
 Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
 
