@@ -1,0 +1,8 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* fixed size for more button */
+.more {
+  width: 40px;
+}

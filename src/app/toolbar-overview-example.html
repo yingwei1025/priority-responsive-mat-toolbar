@@ -1,0 +1,41 @@
+<div #mainToolbar>
+  <mat-toolbar color="primary">
+    <button
+      mat-button
+      *ngFor="let tool of toolbarListItems"
+      id="{{ tool.menuIcon }}"
+      (click)="clickMenuItem(tool)"
+    >
+      <mat-icon>{{ tool.menuIcon }}</mat-icon>
+    </button>
+
+    <span *ngIf="popupListItems.length" class="spacer"></span>
+
+    <button
+      *ngIf="popupListItems.length"
+      mat-icon-button
+      [matMenuTriggerFor]="moremenu"
+      class="more"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+
+<mat-menu #moremenu="matMenu">
+  <button
+    mat-menu-item
+    *ngFor="let item of popupListItems"
+    (click)="clickMenuItem(item)"
+  >
+    <mat-icon>{{ item.menuIcon }}</mat-icon>
+  </button>
+</mat-menu>
+<br />
+<button mat-raised-button (click)="addItemToPopup()">Add to more popup</button>
+
+<br />
+<br />
+<button mat-raised-button (click)="removeItemFromPopup()">
+  Remove from more popup
+</button>
