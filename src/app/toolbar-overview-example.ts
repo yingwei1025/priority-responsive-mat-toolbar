@@ -43,7 +43,9 @@ export class ToolbarOverviewExample implements AfterViewInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     // adjust the toolbar based on logic
-    this.adjustToolBar();
+    setTimeout(() => {
+      this.adjustToolBar();
+    }, 100);
   }
 
   ngOnInit(): void {}
